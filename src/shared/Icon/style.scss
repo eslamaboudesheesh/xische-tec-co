@@ -1,0 +1,8 @@
+@import '../../assets/styles/_color';
+@import '../../assets/styles/_variables';
+
+.dark-theme {
+    .cycle-icon {
+        color: $white !important;
+    }
+}

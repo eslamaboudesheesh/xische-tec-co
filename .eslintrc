@@ -1,0 +1,151 @@
+{
+    "root": true,
+    "env": {
+      "browser": true,
+      "es6": true,
+      "mocha": true,
+      "jest": true
+    },
+    "extends": [
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "react-app",
+      "airbnb",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true,
+        "jsx": true,
+        "modules": true
+      },
+      "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint", "import", "jsx-a11y", "react", "prettier"],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": ["src"],
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
+      }
+    },
+    "rules": {
+      "no-empty-function": "off",
+      "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+      "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+
+      "@typescript-eslint/no-empty-function": "error",
+      "import/prefer-default-export": "off",
+      "semi": "error",
+      "jsx-a11y/label-has-associated-control": [ 2, {
+        "labelComponents": ["CustomInputLabel"],
+        "labelAttributes": ["label"],
+        "controlComponents": ["CustomInput"],
+        "depth": 3,
+      }],
+      "object-curly-spacing": [
+        "error",
+        "always",
+        {
+          "arraysInObjects": true,
+          "objectsInObjects": true
+        }
+      ],
+      "quotes": ["error", "single"],
+      "max-len": [
+        "error",
+        {
+          "code": 120,
+          "tabWidth": 2,
+          "ignoreStrings": true,
+          "ignoreTemplateLiterals": true,
+          "ignoreTrailingComments": true,
+          "ignoreComments": false
+        }
+      ],
+      "no-console": "warn",
+      "radix": "off",
+      "arrow-parens": ["error", "as-needed"],
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
+      ],
+      "react/require-default-props": "off",
+      "react/prop-types": "warn",
+      "no-unused-expressions": ["warn", { "allowShortCircuit": true, "allowTernary": true }],
+      "react/jsx-props-no-spreading": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "useTabs": false,
+          "printWidth": 120,
+          "tabWidth": 2,
+          "singleQuote": true,
+          "trailingComma": "all",
+          "jsxBracketSameLine": false,
+          "bracketSpacing": true,
+          "arrowParens": "avoid",
+          "semi": true,
+          "parser": "flow",
+          "endOfLine": "auto"
+        }
+      ],
+      "no-plusplus": "off",
+      "no-else-return": ["error", { "allowElseIf": true }],
+      "no-nested-ternary": "off",
+      "no-return-assign": "off",
+      "no-param-reassign": [
+        "error",
+        {
+          "props": true,
+          "ignorePropertyModificationsFor": ["accumulator"]
+        }
+      ],
+      // =============== Type Script Related ===============
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+
+      // =============== Enabled Through Type Script Only ===============
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+      "@typescript-eslint/ban-ts-comment": "off",
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-use-before-define": ["error"],
+
+      "indent": "off",
+      "import/no-extraneous-dependencies": ["error"],
+      // disable the rule for all files
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "react/function-component-definition": [
+        2,
+        {
+          "namedComponents": "arrow-function",
+          "unnamedComponents": "arrow-function"
+        }
+      ]
+    },
+    "overrides": [
+      {
+        // enable the rule specifically for TypeScript files
+        "files": ["*.ts", "*.mts", "*.cts", "*.tsx"],
+        "rules": {
+          "@typescript-eslint/explicit-module-boundary-types": ["error"]
+        }
+      }
+    ]
+  }

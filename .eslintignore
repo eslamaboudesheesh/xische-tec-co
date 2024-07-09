@@ -1,0 +1,15 @@
+// Dependencies
+node_modules/*
+public/*
+src/assets
+
+// Logs and yarn.lock
+*.log
+yarn.lock
+
+// Files and Folders to be Linted
+src/assets
+src/routes
+src/context
+src/hooks
+src/translations
