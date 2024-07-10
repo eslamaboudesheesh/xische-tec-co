@@ -36,7 +36,7 @@ const MostPopularArticlePage = () => {
   }, [isInitialMount]);
 
   return (
-    <div className="articleList-wrapper">
+    <>
       {error && <NycAlert message={error} type="error" />}
 
       <div className="title-wrapper">
@@ -67,7 +67,7 @@ const MostPopularArticlePage = () => {
       ) : (
         <EmptySection />
       )}
-    </div>
+    </>
   );
 };
 

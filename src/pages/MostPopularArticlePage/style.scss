@@ -4,3 +4,8 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.article-title {
+    &:hover { 
+        color: #777;
+    }
+}

@@ -1,30 +1,35 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import CardActions from '@mui/material/CardActions';
+
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import defaultImageUrl from '../../../assets/images/placeholder.png';
+import { useNavigate } from 'react-router-dom';
 import Icon from '../../../shared/Icon';
 
 const ArticleCard = ({ article }) => {
+  const navigate = useNavigate();
   // eslint-disable-next-line camelcase
-  const { title, abstract, byline, published_date, url, media } = article;
+  const { title, abstract, byline, published_date } = article;
 
-  const imageUrl = media.length > 0 ? media[0]['media-metadata'][2].url : defaultImageUrl;
+  const handleArticleClick = data => {
+    navigate(`/articles/${data.id}`, { state: { data } });
+  };
 
   return (
     <Card sx={{ display: 'flex', flexDirection: 'column', maxWidth: 345, mb: 2, height: '100%' }}>
-      {imageUrl && <CardMedia component="img" height="140" image={imageUrl} alt={title} />}
       <CardContent sx={{ flexGrow: 1 }}>
         <Typography
           gutterBottom
           variant="h5"
           component="div"
-          sx={{ fontWeight: 'bold', fontSize: '1.25rem', color: '#333' }}
+          sx={{ fontWeight: 'bold', fontSize: '1.25rem', color: '#333', cursor: 'pointer' }}
+          onClick={() => handleArticleClick(article)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={e => e.key === 'Enter' && handleArticleClick(article)}
+          className="article-title"
         >
           {title}
         </Typography>
@@ -57,11 +62,6 @@ const ArticleCard = ({ article }) => {
           </Typography>
         </Box>
       </CardContent>
-      <CardActions sx={{ mt: 'auto' }}>
-        <Button size="small" color="primary" href={url} target="_blank">
-          Read More
-        </Button>
-      </CardActions>
     </Card>
   );
 };

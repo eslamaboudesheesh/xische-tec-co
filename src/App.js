@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { paths } from './routes/paths';
 import Layout from './layout';
 import MostPopularArticlePage from './pages/MostPopularArticlePage';
+import ArticleDetailPage from './pages/articleDetailsPage';
 
 const App = () => (
   <Routes>
@@ -12,6 +13,14 @@ const App = () => (
       element={
         <Layout>
           <MostPopularArticlePage />
+        </Layout>
+      }
+    />
+    <Route
+      path={paths.details}
+      element={
+        <Layout>
+          <ArticleDetailPage />
         </Layout>
       }
     />
