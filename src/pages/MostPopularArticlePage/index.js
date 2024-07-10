@@ -21,7 +21,7 @@ const MostPopularArticlePage = () => {
         <NycLoading />
       ) : (
         <>
-          <p>all data </p>
+          <p>Most Popular Articles </p>
           {data && data.length > 0 ? (
             data.map(article => (
               <div key={article.id}>
