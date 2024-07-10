@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/xische-tec-co/static/css/main.2420fbe0.css",
-    "main.js": "/xische-tec-co/static/js/main.312bf7a4.js",
+    "main.js": "/xische-tec-co/static/js/main.79a71ab8.js",
     "static/js/453.e1e9e4fb.chunk.js": "/xische-tec-co/static/js/453.e1e9e4fb.chunk.js",
     "static/media/la-brands-400.svg": "/xische-tec-co/static/media/la-brands-400.331115337bc9be66667a.svg",
     "static/media/la-solid-900.svg": "/xische-tec-co/static/media/la-solid-900.0f874d69730f8631d632.svg",
@@ -28,11 +28,11 @@
     "static/media/la-regular-400.woff2": "/xische-tec-co/static/media/la-regular-400.8dc1cedf1f4987f82b72.woff2",
     "index.html": "/xische-tec-co/index.html",
     "main.2420fbe0.css.map": "/xische-tec-co/static/css/main.2420fbe0.css.map",
-    "main.312bf7a4.js.map": "/xische-tec-co/static/js/main.312bf7a4.js.map",
+    "main.79a71ab8.js.map": "/xische-tec-co/static/js/main.79a71ab8.js.map",
     "453.e1e9e4fb.chunk.js.map": "/xische-tec-co/static/js/453.e1e9e4fb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2420fbe0.css",
-    "static/js/main.312bf7a4.js"
+    "static/js/main.79a71ab8.js"
   ]
 }
