@@ -5,7 +5,7 @@ import Layout from './layout';
 import MostPopularArticlePage from './pages/MostPopularArticlePage';
 
 const App = () => (
-  <Routes basename={process.env.PUBLIC_URL}>
+  <Routes>
     <Route path="*" element={<Navigate to={{ pathname: paths.general }} />} />
     <Route
       path={paths.general}
