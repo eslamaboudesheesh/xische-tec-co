@@ -17,7 +17,7 @@ const articleListSlice = createSlice({
     },
     fetchDataSuccess(state, action) {
       state.loading = false;
-      state.data = action.payload.results;
+      state.data = action.payload.results || action.payload; // Adjust this line
     },
     fetchDataFailure(state, action) {
       state.loading = false;

@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import axios from 'axios';
 import { fetchDataFailure, fetchDataStart, fetchDataSuccess } from './articleListSlice';
 import { API_KEY, MOST_POPULAR } from '../../apis/configs/apiConfig';
 
@@ -7,19 +9,20 @@ export const fetchArticleList =
     try {
       dispatch(fetchDataStart());
 
-      const response = await fetch(`${MOST_POPULAR}/${articleId}.json?api-key=${API_KEY}`, {
-        method: 'GET',
+      const response = await axios.get(`${MOST_POPULAR}/${articleId}.json?api-key=${API_KEY}`, {
         headers: {
           'Content-Type': 'application/json',
         },
       });
 
-      if (!response.ok) {
+      if (response.status !== 200) {
         throw new Error('Network response was not ok');
       }
-      const data = await response.json();
-      dispatch(fetchDataSuccess(data));
+
+      dispatch(fetchDataSuccess(response.data));
+      return response.data;
     } catch (error) {
       dispatch(fetchDataFailure(error.message));
+      throw error;
     }
   };
