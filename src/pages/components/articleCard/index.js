@@ -7,8 +7,8 @@ import Button from '@mui/material/Button';
 import CardActions from '@mui/material/CardActions';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-
 import defaultImageUrl from '../../../assets/images/placeholder.png';
+import Icon from '../../../shared/Icon';
 
 const ArticleCard = ({ article }) => {
   // eslint-disable-next-line camelcase
@@ -19,19 +19,41 @@ const ArticleCard = ({ article }) => {
   return (
     <Card sx={{ display: 'flex', flexDirection: 'column', maxWidth: 345, mb: 2, height: '100%' }}>
       {imageUrl && <CardMedia component="img" height="140" image={imageUrl} alt={title} />}
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+      <CardContent sx={{ flexGrow: 1 }}>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          sx={{ fontWeight: 'bold', fontSize: '1.25rem', color: '#333' }}
+        >
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.875rem', color: '#666' }}>
           {abstract}
         </Typography>
         <Box mt={2}>
-          <Typography variant="body2" color="text.secondary">
-            {byline}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {new Date(published_date).toLocaleDateString()}
+          {byline && (
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ display: 'flex', alignItems: 'center', justifyContent: 'start', mt: 2 }}
+            >
+              <Icon icon="la-pen" />
+              <Box component="span" ml={1}>
+                {byline}
+              </Box>
+            </Typography>
+          )}
+
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ display: 'flex', alignItems: 'center', justifyContent: 'start', mt: 2 }}
+          >
+            <Icon icon="la-calendar" />
+            <Box component="span" ml={1}>
+              {new Date(published_date).toLocaleDateString()}
+            </Box>
           </Typography>
         </Box>
       </CardContent>
