@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://eslamaboudesheesh.github.io/xische-tec-co/static/css/main.a266c9ac.css",
-    "main.js": "https://eslamaboudesheesh.github.io/xische-tec-co/static/js/main.21978f36.js",
+    "main.js": "https://eslamaboudesheesh.github.io/xische-tec-co/static/js/main.d0b34bc4.js",
     "static/js/453.e1e9e4fb.chunk.js": "https://eslamaboudesheesh.github.io/xische-tec-co/static/js/453.e1e9e4fb.chunk.js",
     "static/media/la-brands-400.svg": "https://eslamaboudesheesh.github.io/xische-tec-co/static/media/la-brands-400.331115337bc9be66667a.svg",
     "static/media/la-solid-900.svg": "https://eslamaboudesheesh.github.io/xische-tec-co/static/media/la-solid-900.0f874d69730f8631d632.svg",
@@ -29,11 +29,11 @@
     "static/media/logo.svg": "https://eslamaboudesheesh.github.io/xische-tec-co/static/media/logo.7988585307626b8711ae85ba07977872.svg",
     "index.html": "https://eslamaboudesheesh.github.io/xische-tec-co/index.html",
     "main.a266c9ac.css.map": "https://eslamaboudesheesh.github.io/xische-tec-co/static/css/main.a266c9ac.css.map",
-    "main.21978f36.js.map": "https://eslamaboudesheesh.github.io/xische-tec-co/static/js/main.21978f36.js.map",
+    "main.d0b34bc4.js.map": "https://eslamaboudesheesh.github.io/xische-tec-co/static/js/main.d0b34bc4.js.map",
     "453.e1e9e4fb.chunk.js.map": "https://eslamaboudesheesh.github.io/xische-tec-co/static/js/453.e1e9e4fb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a266c9ac.css",
-    "static/js/main.21978f36.js"
+    "static/js/main.d0b34bc4.js"
   ]
 }
