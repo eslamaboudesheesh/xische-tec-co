@@ -20,6 +20,7 @@ const ArticleDetailPage = () => {
       sx={{
         mb: 2,
         mt: 4,
+        minHeight: '100vh',
       }}
     >
       <Card>
