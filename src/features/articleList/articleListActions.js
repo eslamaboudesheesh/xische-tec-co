@@ -22,7 +22,8 @@ export const fetchArticleList =
       dispatch(fetchDataSuccess(response.data));
       return response.data;
     } catch (error) {
-      dispatch(fetchDataFailure(error.message));
+      const errorMessage = error.response?.data?.message || error.message || 'Something went wrong';
+      dispatch(fetchDataFailure(errorMessage));
       throw error;
     }
   };
