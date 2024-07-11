@@ -39,7 +39,10 @@ Compiles and minifies for production
 ```
 npm run build
 ```
-
+for deployment 
+```
+npm run deploy
+```
 Run Unit Test
 
 ```
